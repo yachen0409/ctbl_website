@@ -28,7 +28,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 export default{
-  setup() {
+  setup() { 
     const isLoading = ref(false)
     onMounted(() => {
       isLoading.value = true
