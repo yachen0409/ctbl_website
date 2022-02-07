@@ -17,9 +17,9 @@
       <router-link to="/teams">球隊</router-link>
       <router-link to="/about">關於</router-link>
       <div id="icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="far fa-envelope"></i></a>    
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="far fa-envelope"></i></a>    
       </div>
     </div>    
     <router-view />
@@ -42,7 +42,7 @@ export default{
 </script>
 
 <style>
-#start{
+#start {
   width: 100%;
   height: 1000%;
 }
