@@ -1,29 +1,30 @@
 <template>
-  <div v-if="isLoading" id="start">
-    <video id="video-container" autoplay muted>
-      <source src="./assets/start.mp4" type="video/mp4" />
-    </video>
-  </div>
-  <div v-else>
-    <div id="nav">
-      <router-link to="/announcement">公告</router-link>
-      <router-link to="/schedule">賽程</router-link>
-      <router-link to="/score">比分</router-link>
-      <router-link to="/data">數據</router-link>
-      <div id="polygon">
+  <div id="app">
+    <div v-if="isLoading" id="start">
+      <video id="video-container" autoplay muted>
+        <source src="./assets/start.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div v-else>
+      <div id="nav">      
         <router-link to="/"><img src="./assets/ctbl_logo.svg" alt="logo" /></router-link>
-      </div>
-      <router-link to="/info">消息</router-link>
-      <router-link to="/teams">球隊</router-link>
-      <router-link to="/about">關於</router-link>
-      <div id="icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="far fa-envelope"></i></a>    
-      </div>
-    </div>    
-    <router-view />
-  </div>
+        <router-link to="/announcement">公告</router-link>
+        <router-link to="/schedule">賽程</router-link>
+        <router-link to="/score">比分</router-link>
+        <router-link to="/data">數據</router-link>
+
+        <router-link to="/info">消息</router-link>
+        <router-link to="/teams">球隊</router-link>
+        <router-link to="/about">關於</router-link>
+        <div id="icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="far fa-envelope"></i></a>    
+        </div>
+      </div>    
+      <router-view />
+    </div>
+  </div>  
 </template>
 <script>
 import { ref, onMounted } from 'vue';
@@ -42,9 +43,13 @@ export default{
 </script>
 
 <style>
+#app {
+  height: 100vh;
+  background-color: #000;
+}
 #start{
   width: 100%;
-  height: 1000%;
+  height: 100%;
 }
 #start video {
   width: 100%;
@@ -71,18 +76,6 @@ export default{
 }
 #nav a:hover {
   border-bottom: 5px solid #9f8950;
-}
-#polygon {
-  height: 90px;
-  width: 130px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%);
-  background-color: #acacac;  
-}
-#polygon a {
-  display: block;
-  height: 90px;
-  width: 130px;
 }
 
 #icons {
