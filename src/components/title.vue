@@ -1,8 +1,8 @@
 <template>
-  <div id="title">
+  <div id="iftitle">
     <div class="container-xxl">
       <div class="row justify-content-between">
-        
+
         <a id="logo" class="navbar-brand col-2 text-white fw-bold" href="">
           {{ titles.title }}
         </a>
@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 
-#title {
+#iftitle {
   align-items: center;
   background: linear-gradient(271.52deg, rgba(159, 137, 80, 0.495) 2.22%, rgba(152, 131, 78, 0.440943) 18.74%, rgba(89, 81, 61, 0) 95.38%);
   padding: 6px 6px;
