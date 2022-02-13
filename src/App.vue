@@ -13,7 +13,7 @@
         <router-link to="/score">比分</router-link>
         <router-link to="/data">數據</router-link>
 
-        <router-link to="/info">消息</router-link>
+        <router-link to="/info/news">消息</router-link>
         <router-link to="/teams">球隊</router-link>
         <router-link to="/about">關於</router-link>
         <div id="icons">
@@ -31,18 +31,18 @@ import { ref, onMounted } from 'vue';
 export default{
   setup() { 
     const isLoading = ref(false)
-    onMounted(() => {
-      isLoading.value = true
-      setTimeout(() => {
-        isLoading.value = false
-      }, 4000)
-    })
+    // onMounted(() => {
+    //   isLoading.value = true
+    //   setTimeout(() => {
+    //     isLoading.value = false
+    //   }, 4000)
+    // })
     return { isLoading }
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   height: 100vh;
   background-color: #000;
