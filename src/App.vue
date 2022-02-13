@@ -13,7 +13,7 @@
       <div id="polygon">
         <router-link to="/"><img src="./assets/ctbl_logo.svg" alt="logo" /></router-link>
       </div>
-      <router-link to="/info">消息</router-link>
+      <router-link to="/info/news">消息</router-link>
       <router-link to="/teams">球隊</router-link>
       <router-link to="/about">關於</router-link>
       <div id="icons">
@@ -30,12 +30,12 @@ import { ref, onMounted } from 'vue';
 export default{
   setup() {
     const isLoading = ref(false)
-    onMounted(() => {
-      isLoading.value = true
-      setTimeout(() => {
-        isLoading.value = false
-      }, 4000)
-    })
+    // onMounted(() => {
+    //   isLoading.value = true
+    //   setTimeout(() => {
+    //     isLoading.value = false
+    //   }, 4000)
+    // })
     return { isLoading }
   }
 }
