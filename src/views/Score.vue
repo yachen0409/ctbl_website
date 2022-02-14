@@ -4,6 +4,11 @@
       <h1>Score</h1> 
     </div>
     <Selection />
+    <div id="table">
+      <table>
+
+      </table>
+    </div>
   </div>
 </template>
 
@@ -23,6 +28,10 @@ export default {
   height: 1000px;
   background-color: #2c2c2c;
   color: white;
+}
+.table {
+  
+  background-color: #373737;
 }
 #title {
   height: 75px;
