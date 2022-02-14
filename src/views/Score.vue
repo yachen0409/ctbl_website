@@ -1,19 +1,12 @@
 <template>
   <div class="score">
-    <div id="title">
-      <h1>Score</h1> 
-    </div>
-    <Selection />
+    <h1>This is Score page</h1>
   </div>
 </template>
 
 <script>
-import Selection from './../components/schedule/Selection.vue'
 export default {
-  components: { Selection },
-  setup() {
 
-  }
 }
 </script>
 

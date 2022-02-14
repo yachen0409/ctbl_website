@@ -7,10 +7,6 @@ import Data from '../views/Data.vue'
 import Info from '../views/Info.vue'
 import Teams from '../views/Teams.vue'
 import About from '../views/About.vue'
-import Photos from '../views/photos.vue'
-import News from '../views/news.vue'
-import Videos from '../views/videos.vue'
-
 const routes = [
   {
     path: '/',
@@ -51,21 +47,6 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
-  },
-  {
-    path: '/info/photos',
-    name: 'Photos',
-    component: Photos
-  },
-  {
-    path: '/info/news',
-    name: 'News',
-    component: News
-  },
-  {
-    path: '/info/videos',
-    name: 'Videos',
-    component: Videos
   }
 ]
 

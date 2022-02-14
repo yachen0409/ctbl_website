@@ -14,12 +14,11 @@ import Table from './../components/schedule/Table.vue'
 export default {
   components: { Selection, Table },
   setup(){
-
   }
 }
 </script>
 
-<style scoped>
+<style>
 .schedule {
   width: 100%;
   height: 100vh;
