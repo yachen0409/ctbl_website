@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .schedule {
   width: 100%;
   height: 1000px;
