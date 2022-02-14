@@ -1,25 +1,19 @@
 <template>
     <div class = "ranking1">
         <div id = "rankbar">
-            
             <div id = "year" >
                 <div class ="left"></div>
                 <div class = "num">
                     <h1>2021-22</h1>
                 </div>
-                
                 <div class ="right"></div>
             </div>
-            
             <div class = "choose">
                 <button id="zonhe" class ="chooses">綜合排行</button>
                 <button id="player" class ="chooses">球員數據</button>
-                <button id="team" class ="chooses">球隊數據</button>
-                
-            </div>
-            
+                <button id="team" class ="chooses">球隊數據</button> 
+            </div>   
         </div>
-
     </div>
 </template>
 
@@ -112,10 +106,6 @@ button:active {
     /* background: -moz-linear-gradient(top, #1c1c1c, #2a2a2a);
     background: linear-gradient(to bottom, #1c1c1c, #2a2a2a); */
 }
-
-
-
-
 .num {
     width: 220px;
     text-align: center;
@@ -145,10 +135,4 @@ button:active {
     width: 15px;
     background-color:#9F8950;
 }
-
-
-
-
-
-
 </style>
