@@ -3,11 +3,14 @@
     <div id="title">
       <h1>schedule</h1>
     </div>
+    <Selection />
   </div>
 </template>
 
 <script>
+import Selection from './../components/schedule/Selection.vue'
 export default {
+  components: { Selection },
   setup(){
 
   }
@@ -24,11 +27,13 @@ export default {
 #title {
   height: 75px;
   background: linear-gradient(269.04deg, rgba(159, 137, 80, 0.495) 57.82%, rgba(89, 81, 61, 0) 85.4%);
-  padding: 6px 6px;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   font: bold 28px 'Bai Jamjuree';
   letter-spacing: 0.4em; 
+}
+#title h1 {
+  margin-left: 3%;
 }
 </style>
