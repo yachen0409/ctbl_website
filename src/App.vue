@@ -82,11 +82,9 @@ export default{
 #nav a:hover {
   border-bottom: 5px solid #9f8950;
 }
-
 #home a:hover{
   border-bottom: 5px solid #000;
 }
-
 #icons {
   width: 75px;
   display: inline-flex;
