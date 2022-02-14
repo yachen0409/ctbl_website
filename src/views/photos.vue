@@ -1,7 +1,9 @@
 <template>
   <div id="photos">
     <Title :titles="{ title : 'PHOTOS' }"></Title>
-    <h1>This is photo page</h1>
+    <div id="photosContent">
+      <h1>This is photo page</h1>
+    </div>
   </div>
   
 </template>
@@ -21,5 +23,10 @@ export default {
   background-color: #2c2c2c;
   color: white;
   text-align: center;
+}
+
+#photosContent {
+  position: sticky;
+  top: 160px;
 }
 </style>
