@@ -99,6 +99,8 @@ export default {
 
 <style scoped>
 .select {
+  position: fixed;
+  top: 20%;
   display: flex;
   flex-direction: row;
   align-items: center;
