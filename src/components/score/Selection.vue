@@ -153,8 +153,8 @@ export default {
   font: bold 20px 'Bai Jamjuree';
   line-height: 50px;
   letter-spacing: 0.1em;
-  border-radius: 0;
   border: 0;
+  border-radius: 0;
   cursor: pointer;
 }
 #f-round-active, #s-round-active, #ssn-off-active {
