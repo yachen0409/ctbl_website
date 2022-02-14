@@ -97,7 +97,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .select {
   display: flex;
   flex-direction: row;

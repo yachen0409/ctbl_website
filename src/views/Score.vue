@@ -3,13 +3,17 @@
     <div id="title">
       <h1>Score</h1> 
     </div>
-    
+    <Selection />
   </div>
 </template>
 
 <script>
+import Selection from './../components/schedule/Selection.vue'
 export default {
+  components: { Selection },
+  setup() {
 
+  }
 }
 </script>
 

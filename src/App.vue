@@ -64,6 +64,9 @@ export default{
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 #nav a {
   display: inline-block;
