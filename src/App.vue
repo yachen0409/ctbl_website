@@ -58,7 +58,7 @@ export default{
 }
 #nav {
   width: 100%;
-  height: 10%;
+  height: 80px;
   background-color: #000;
   display: flex;
   flex-direction: row;
@@ -75,8 +75,8 @@ export default{
   color: white;
   text-align: center;
   width: 75px;
-  height: 70px;
-  line-height: 70px;
+  height: 75px;
+  line-height: 75px;
   border-bottom: 5px solid #000;
 } 
 #nav a:hover {
