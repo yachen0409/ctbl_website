@@ -8,7 +8,8 @@
                 </div>
                 <div class ="right"></div>
             </div>
-            <div class = "choose">
+
+            <div id = "choose">
                 <button id="zonhe" class ="chooses">綜合排行</button>
                 <button id="player" class ="chooses">球員數據</button>
                 <button id="team" class ="chooses">球隊數據</button> 
@@ -49,12 +50,14 @@ export default {
     margin-left: 3%;
     line-height: 75px;
 }
-.choose{
+#choose{
     
     position: absolute;
     left:30%;
+    
+    text-align: center;
     align-items: center;
-    width: 900px;
+    /* width: 80%; */
     /* height: 75px; */
     
 }
@@ -107,7 +110,7 @@ button:active {
     background: linear-gradient(to bottom, #1c1c1c, #2a2a2a); */
 }
 .num {
-    width: 220px;
+    width: 100%;
     text-align: center;
     padding: 10px;
     
