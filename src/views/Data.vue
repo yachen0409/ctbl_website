@@ -14,7 +14,7 @@
 import Ranking1 from '../components/ranking1/Ranking1.vue'
 import Table from '../components/ranking1/Table.vue'
 export default {
-  components:{Ranking1,Table},
+  components:{ Ranking1, Table },
   setup(){
 
   }

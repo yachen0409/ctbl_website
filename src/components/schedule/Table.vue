@@ -41,6 +41,9 @@ export default {
   background-color: #373737;
   overflow-y: scroll;
 }
+.schedule-table::-webkit-scrollbar{
+  display: none;
+}
 .schedule-table table {
   width: 100%;
   height: 100%;
