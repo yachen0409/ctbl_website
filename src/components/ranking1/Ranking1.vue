@@ -1,21 +1,21 @@
 <template>
-    <div class = "ranking1">
-        <div id = "rankbar">
-            <div id = "year" >
-                <div class ="left"></div>
-                <div class = "num">
-                    <h1>2021-22</h1>
-                </div>
-                <div class ="right"></div>
-            </div>
+  <div class = "ranking1">
+    <div id = "rankbar">
+      <div id = "year" >
+        <div class ="left"></div>
+          <div class = "num">
+            <h1>2021-22</h1>
+          </div>
+        <div class ="right"></div>
+      </div>
 
-            <div id = "choose">
-                <button id="zonhe" class ="chooses">綜合排行</button>
-                <button id="player" class ="chooses">球員數據</button>
-                <button id="team" class ="chooses">球隊數據</button> 
-            </div>   
-        </div>
+      <div id = "choose">
+        <button id="zonhe" class ="chooses">綜合排行</button>
+        <button id="player" class ="chooses">球員數據</button>
+        <button id="team" class ="chooses">球隊數據</button> 
+      </div>   
     </div>
+  </div>
 </template>
 
 <script>
