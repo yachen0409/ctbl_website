@@ -4,22 +4,23 @@
       <h1>statistic</h1>
     </div>
     <div class="space"></div>
-    <Ranking1 /> 
+    <Ranking1 />
     <Table />
   </div>
 
 </template>
 
 <script>
-import Ranking1 from '../components/ranking1/Ranking1.vue'
-import Table from '../components/ranking1/Table.vue'
+import Ranking1 from '../components/ranking1/Ranking1.vue';
+import Table from '../components/ranking1/Table.vue';
+
 export default {
-  components:{ Ranking1, Table },
-  setup(){
+  components: { Ranking1, Table },
+  setup() {
 
-  }
+  },
 
-}
+};
 </script>
 
 <style>
