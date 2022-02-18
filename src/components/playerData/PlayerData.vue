@@ -1,13 +1,14 @@
 <template>
   <div class="playerdata">
     <div id="playertable">
-      <div id="year">
+
+      <!-- <div id="year">
         <div class="left"></div>
         <div class="num">
           <h1>2021-2022</h1>
         </div>
         <div class="right"></div>
-      </div>
+      </div> -->
 
       <div id="choose">
         <button id="zonhe" class="chooses">綜合排行</button>
@@ -36,6 +37,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
