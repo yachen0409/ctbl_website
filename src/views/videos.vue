@@ -1,7 +1,10 @@
 <template>
   <div id="videos">
     <Title :titles="{ title : 'VIDEOS' }"></Title>
-    <h1>This is videos page</h1>
+    <div id="videosContent">
+      <h1>This is videos page</h1>
+    </div>
+    
   </div>
 </template>
 
@@ -20,5 +23,10 @@ export default {
   background-color: #2c2c2c;
   color: white;
   text-align: center;
+}
+
+#videosContent {
+  position: sticky;
+  top: 160px;
 }
 </style>
