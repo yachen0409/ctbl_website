@@ -28,11 +28,18 @@ export default {
     const yearincrease = ()=> {
       first = parseInt(first) + 1 ;
       second = parseInt(second) + 1 ;
+
+      
       yr.value = first + "-" + second;
     }
     const yeardecrease = ()=> {
       first = parseInt(first) - 1 ;
       second = parseInt(second) - 1 ;
+
+      if(parseInt(second) < 22){
+        first = parseInt(first) +1;
+        second = parseInt(second) +1;
+      }
       yr.value = first + "-" + second;
     }
 
