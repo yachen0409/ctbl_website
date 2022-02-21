@@ -8,7 +8,7 @@
     <div v-else>
       <div id="nav">
         <div id="home">
-          <router-link to="/"><img src="./assets/ctbl_logo.svg" alt="logo" /></router-link>
+          <router-link to="/"><img src="./assets/logo.png" alt="logo" /></router-link>
         </div>      
         <router-link to="/announcement">公告</router-link>
         <router-link to="/schedule">賽程</router-link>
@@ -82,6 +82,10 @@ export default{
 } 
 #nav a:hover {
   border-bottom: 5px solid #9f8950;
+}
+#home img {
+  width: 100px;
+  height: 100px;
 }
 #home a:hover{
   border-bottom: 5px solid #000;
