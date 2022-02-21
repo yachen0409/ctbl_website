@@ -3,30 +3,17 @@
     <div id="title">
       <h1>score</h1>
     </div>
-<<<<<<< HEAD
     <Selection />
     <Table />
-=======
-    <ScoreSelection />
->>>>>>> 6e9ba994c4627e65701a348446d13a2cf7ff9425
   </div>
-  
 </template>
 
 <script>
-<<<<<<< HEAD
 import Selection from './../components/score/Selection.vue'
 import Table from './../components/score/Table.vue'
 export default {
   components: { Selection, Table },
   setup(){
-=======
-import ScoreSelection from "../components/score/ScoreSelection.vue"
-export default {
-  components: { ScoreSelection },
-  setup() {
-
->>>>>>> 6e9ba994c4627e65701a348446d13a2cf7ff9425
   }
 }
 </script>
