@@ -53,7 +53,7 @@ const routes = [
     component: Photos
   },
   {
-    path: '/info/videos',
+    path: '/info/Videos',
     name: 'Videos',
     component: Videos
   },
