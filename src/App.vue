@@ -15,7 +15,6 @@
         <router-link to="/score">比分</router-link>
         <router-link to="/data">數據</router-link>
         <router-link to="/info/news">消息</router-link>
-        <router-link to="/teams">球隊</router-link>
         <router-link to="/about">關於</router-link>
         <div id="icons">
             <a href="https://www.facebook.com/CTBL-%E4%BA%A4%E5%A4%A7%E7%B1%83%E7%90%83%E8%81%AF%E7%9B%9F-704812476380338/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -32,12 +31,12 @@ import { ref, onMounted } from 'vue';
 export default{
   setup() { 
     const isLoading = ref(false)
-    // onMounted(() => {
-    //   isLoading.value = true
-    //   setTimeout(() => {
-    //     isLoading.value = false
-    //   }, 4000)
-    // })
+    onMounted(() => {
+      isLoading.value = true
+      setTimeout(() => {
+        isLoading.value = false
+      }, 4000)
+    })
     return { isLoading }
   }
 }
