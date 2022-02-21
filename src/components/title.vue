@@ -10,7 +10,7 @@
         <div id="infoTimer" class="col text-white">
           <div class="row align-items-center">
             <div id="infoLeft" role="button" @click="minusMonth"></div>
-            <span id="infoTime" class="col-2">{{ myYear }} {{ months[myMonth] }}</span>
+            <span id="infoTime" class="col-2">{{ myYear }} {{ sem[myMonth] }}</span>
             <div id="infoRight" role="button" @click="addMonth"></div>
           </div>
             
@@ -19,19 +19,16 @@
         <div id="btns" class="col-md-5 me-5 align-self-center">
           <div class="row justify-content-end">
             <router-link to="/info/news" id="newsBtn" tag="button" 
-            @mouseover="newsBorder = true" @mouseleave="newsBorder = false"
-            :class="{hoverBorder: newsBorder}"
-            class="nav-link text-white col col-xxl-2">賽事報導</router-link>
+            @mouseover="addBorder" @mouseleave="deleteBorder"
+            class="nav-link text-white col-3 col-xxl-2">賽事報導</router-link>
 
             <router-link to="/info/photos" id="photosBtn" tag="button" 
-            @mouseover="photosBorder = true" @mouseleave="photosBorder = false"
-            :class="{hoverBorder: photosBorder}"
-            class="nav-link text-white col col-xxl-2">照片回顧</router-link>
+            @mouseover="addBorder" @mouseleave="deleteBorder"
+            class="nav-link text-white col-3 col-xxl-2">照片回顧</router-link>
 
             <router-link to="/info/videos" id="videosBtn" tag="button" 
-            @mouseover="videosBorder = true" @mouseleave="videosBorder = false"
-            :class="{hoverBorder: videosBorder}"
-            class="nav-link text-white col col-xxl-2">影音紀錄</router-link>
+            @mouseover="addBorder" @mouseleave="deleteBorder"
+            class="nav-link text-white col-3 col-xxl-2">影音紀錄</router-link>
           </div>
         </div>
 
@@ -43,32 +40,37 @@
 
 <script>
 
-
 export default {
   props: ['titles'],
   data() {
     return {
-      newsBorder: false,
-      photosBorder: false,
-      videosBorder: false,
-      myDate: new Date(2021, 10),
+      myDate: new Date(2021, 10, 28),
       myYear: 2021,
-      myMonth: 10,
-      months: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+      myMonth: 1,
+      sem: ['I', 'II']
     }
   },
   methods: {
+    addBorder(e) {
+      e.target.classList.add('hoverBorder')
+    },
+    deleteBorder(e) {
+      e.target.classList.remove('hoverBorder')
+    },
     minusMonth() {
-      if (this.myDate.getTime() > 1635696000000) {
-        this.myDate.setMonth(this.myDate.getMonth() - 1)
+      if (this.myDate.getTime() > 1625068800000) {
+        this.myDate.setMonth(this.myDate.getMonth() - 6)
         this.myYear = this.myDate.getFullYear()
-        this.myMonth = this.myDate.getMonth()
+        this.myMonth = (++this.myMonth) % 2
       }
     },
     addMonth() {
-      this.myDate.setMonth(this.myDate.getMonth() + 1);
+      this.myDate.setMonth(this.myDate.getMonth() + 6);
       this.myYear = this.myDate.getFullYear()
-      this.myMonth = this.myDate.getMonth()
+      this.myMonth = (++this.myMonth) % 2
+    },
+    sendDate() {
+      this.$emit('sendTitleDate', this.myDate)
     }
   },
 }
