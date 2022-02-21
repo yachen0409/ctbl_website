@@ -81,7 +81,7 @@ export default {
 <style>
 #photos {
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   background-color: #2c2c2c;
   color: white;
   text-align: center;

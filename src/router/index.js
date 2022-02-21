@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Announcement from '../views/Announcement.vue'
+import SinglePost from '../components/SinglePost.vue'
 import Schedule from '../views/Schedule.vue'
 import Score from '../views/Score.vue'
 import Data from '../views/Data.vue'
 import Info from '../views/Info.vue'
-import Teams from '../views/Teams.vue'
 import About from '../views/About.vue'
 import Photos from '../views/Photos.vue'
 import News from '../views/News.vue'
@@ -23,6 +23,11 @@ const routes = [
     component: Announcement
   },
   {
+    path: '/announcement/:id',
+    name: 'SinglePost',
+    component: SinglePost
+  },
+  {
     path: '/schedule',
     name: 'Schedule',
     component: Schedule
@@ -38,19 +43,9 @@ const routes = [
     component: Data
   },
   {
-    path: '/info',
-    name: 'Info',
-    component: Info
-  },
-  {
-    path: '/teams',
-    name: 'Teams',
-    component: Teams
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/info/news',
+    name: 'News',
+    component: News
   },
   {
     path: '/info/photos',
@@ -58,14 +53,14 @@ const routes = [
     component: Photos
   },
   {
-    path: '/info/news',
-    name: 'News',
-    component: News
-  },
-  {
     path: '/info/videos',
     name: 'Videos',
     component: Videos
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   }
 ]
 
