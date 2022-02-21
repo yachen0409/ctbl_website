@@ -31,12 +31,12 @@ import { ref, onMounted } from 'vue';
 export default{
   setup() { 
     const isLoading = ref(false)
-    // onMounted(() => {
-    //   isLoading.value = true
-    //   setTimeout(() => {
-    //     isLoading.value = false
-    //   }, 4000)
-    // })
+    onMounted(() => {
+      isLoading.value = true
+      setTimeout(() => {
+        isLoading.value = false
+      }, 4000)
+    })
     return { isLoading }
   }
 }
@@ -56,6 +56,8 @@ export default{
   height: 100%;
 }
 #nav {
+  position: sticky;
+  top: 0px;
   width: 100%;
   height: 80px;
   background-color: #000;
