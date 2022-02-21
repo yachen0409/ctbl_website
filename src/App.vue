@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <div v-if="isLoading" id="start">
-      <!-- <video id="video-container" autoplay muted>
+      <video id="video-container" autoplay muted>
         <source src="./assets/start.mp4" type="video/mp4" />
-      </video> -->
+      </video>
     </div>
     <div v-else>
-      <div id="nav">      
-        <router-link to="/"><img src="./assets/ctbl_logo.svg" alt="logo" /></router-link>
+      <div id="nav">
+        <div id="home">
+          <router-link to="/"><img src="./assets/ctbl_logo.svg" alt="logo" /></router-link>
+        </div>      
         <router-link to="/announcement">公告</router-link>
         <router-link to="/schedule">賽程</router-link>
         <router-link to="/score">比分</router-link>
         <router-link to="/data">數據</router-link>
-
-        <router-link to="/info">消息</router-link>
-        <router-link to="/teams">球隊</router-link>
+        <router-link to="/info/news">消息</router-link>
         <router-link to="/about">關於</router-link>
         <div id="icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/CTBL-%E4%BA%A4%E5%A4%A7%E7%B1%83%E7%90%83%E8%81%AF%E7%9B%9F-704812476380338/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/2021ctbl/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="far fa-envelope"></i></a>    
         </div>
       </div>    
@@ -30,19 +30,19 @@
 import { ref, onMounted } from 'vue';
 export default{
   setup() { 
-    // const isLoading = ref(false)
-    // onMounted(() => {
-    //   isLoading.value = true
-    //   setTimeout(() => {
-    //     isLoading.value = false
-    //   }, 4000)
-    // })
-    // return { isLoading }
+    const isLoading = ref(false)
+    onMounted(() => {
+      isLoading.value = true
+      setTimeout(() => {
+        isLoading.value = false
+      }, 4000)
+    })
+    return { isLoading }
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   height: 100vh;
   background-color: #000;
@@ -68,19 +68,22 @@ export default{
   left: 0;
 }
 #nav a {
+  display: inline-block;
   text-decoration: none;
   font: bold 18px "Roboto";
   color: white;
   text-align: center;
   width: 75px;
   height: 75px;
-  line-height: 80px;
+  line-height: 75px;
   border-bottom: 5px solid #000;
-}
+} 
 #nav a:hover {
   border-bottom: 5px solid #9f8950;
 }
-
+#home a:hover{
+  border-bottom: 5px solid #000;
+}
 #icons {
   width: 75px;
   display: inline-flex;

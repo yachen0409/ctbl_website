@@ -54,14 +54,14 @@ export default {
 <style scoped>
 .announcement {
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   background-color: #2c2c2c;
   color: white;
   text-align: center;
 }
 #title {
   position: fixed;
-  top: 10%;
+  top: 100px;
   width: 100%;
   height: 75px;
   background: linear-gradient(269.04deg, rgba(159, 137, 80, 0.495) 57.82%, rgba(89, 81, 61, 0) 85.4%);
@@ -74,7 +74,7 @@ export default {
 }
 #overview {
   position: fixed;
-  top: 25%;
+  top: 230px;
   width: 100%;
   height: 600px;
   overflow-y: scroll;

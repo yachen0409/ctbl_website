@@ -6,7 +6,6 @@ import Schedule from '../views/Schedule.vue'
 import Score from '../views/Score.vue'
 import Data from '../views/Data.vue'
 import Info from '../views/Info.vue'
-import Teams from '../views/Teams.vue'
 import About from '../views/About.vue'
 const routes = [
   {
@@ -43,11 +42,6 @@ const routes = [
     path: '/info',
     name: 'Info',
     component: Info
-  },
-  {
-    path: '/teams',
-    name: 'Teams',
-    component: Teams
   },
   {
     path: '/about',
