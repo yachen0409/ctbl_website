@@ -2,22 +2,7 @@
   <div class="playerdata">
     <div id="playertable">
 
-      <!-- <div id="year">
-        <div class="left"></div>
-        <div class="num">
-          <h1>2021-2022</h1>
-        </div>
-        <div class="right"></div>
-      </div> -->
-
-      <div id="choose">
-        <button id="zonhe" class="chooses">綜合排行</button>
-        <button id="player" class="chooses">球員數據</button>
-        <button id="team" class="chooses">球隊數據</button>
-      </div>
-
-      <form action="">
-        
+      <form action="#">
         <select name="select1" id="type">
           <option value="total">總和</option>
           <option value="average">平均</option>
@@ -80,6 +65,6 @@ export default {
   } 
 
   .select-hide{
-    display: none
+    display: none;
   }
 </style>

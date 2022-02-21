@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    <div class = "table-responsive">
+    <div class ="table-responsive">
       <table class="table table-striped">
-
         <thead>
           <tr>
             <th >球員</th>
@@ -270,69 +269,46 @@ export default {
 
 <style scoped>
 div{
-
- overflow:auto;
-
- width:100%;
-
- height:400px; /* 固定高度 */
-
+  overflow:auto;
+  width:100%;
+  height:400px; /* 固定高度 */
 }
 
 td, th {
-
- border:1px solid gray;
-
- width:100px;
-
- height:30px;
-
+  border:1px solid gray;
+  width:100px;
+  height:30px;
 }
 
 
 table {
-
- table-layout: fixed;
-
- width: 400px; /* 固定寬度 */
+  table-layout: fixed;
+  width: 400px; /* 固定寬度 */
 
 }
 
 td:first-child, th:first-child {
-
- position:sticky;
-
- left:0; /* 首行永遠固定於左 */
-
- background-color: black;
-
- color: aliceblue;
-
- z-index:1;
+  position:sticky;
+  left:0; /* 首行永遠固定於左 */
+  background-color: black;
+  color: aliceblue;
+  z-index:1;
 
 }
 
-.container ::-webkit-scrollbar{
-  display:none;
+.container::-webkit-scrollbar{
+  display: none;
 }
 
 thead tr th {
-
- position:sticky;
-
- top:0; /* 列首永遠固定於上 */
-
- background-color: black;
-
- color: aliceblue;
-
-
+  position:sticky;
+  top:0; /* 列首永遠固定於上 */
+  background-color: black;
+  color: aliceblue;
 }
 
 td:first-child{
-
   z-index: 2;
-
 }
 
 </style>

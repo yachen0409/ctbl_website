@@ -1,20 +1,23 @@
 <template>
-  <div class="select">
-    <div class="date">
-      <div class="left" @click="dateDecrement"></div>
-      <div class="month">
-        <p>{{ date }}</p>
+  <div class="selection">
+    <div class="selectionBar">
+      <div class="date">
+        <div class="left" @click="dateDecrement"></div>
+        <div class="month">
+          <p>{{ date }}</p>
+        </div>
+        <div class="right" @click="dateIncrement"></div>
       </div>
-      <div class="right" @click="dateIncrement"></div>
+      <div class="round">
+        <button id="f_round" class="rounds">第一輪</button>
+        <button id="s_round" class="rounds">第二輪</button>
+        <button id="ssn_off" class="rounds">季後賽</button>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search..." />
+      </div>      
     </div>
-    <div class="round">
-      <button :id="f_round" class="rounds" @click="update1()">第一輪</button>
-      <button :id="s_round" class="rounds" @click="update2()">第二輪</button>
-      <button :id="ssn_off" class="rounds" @click="update3()">季後賽</button>
-    </div>
-    <div class="search">
-      <input type="text" placeholder="Search..." />
-    </div>
+
   </div>
 </template>
 
@@ -67,40 +70,15 @@ export default {
       month = map[digit_month]
       date.value = year + " " + month      
     }
-    
-    const f_round = ref("f-round")
-    const s_round = ref("s-round")
-    const ssn_off = ref("ssn-off")
-    const update1 = () => {
-      if(f_round.value === "f-round"){
-        f_round.value += "-active"
-        s_round.value = s_round.value.substring(0, 7)
-        ssn_off.value = ssn_off.value.substring(0, 7)
-      }
-    }
-    const update2 = () => {
-      if(s_round.value === "s-round"){
-        s_round.value += "-active"
-        f_round.value = f_round.value.substring(0, 7)
-        ssn_off.value = ssn_off.value.substring(0, 7)
-      }
-    }
-    const update3 = () => {
-      if(ssn_off.value === "ssn-off"){
-        ssn_off.value += "-active"
-        f_round.value = f_round.value.substring(0, 7)
-        s_round.value = s_round.value.substring(0, 7)
-      }
-    }    
-    return { date, dateIncrement, dateDecrement, update1, update2, update3, f_round, s_round, ssn_off }
+    return { date, dateIncrement, dateDecrement }
   }
 }
 </script>
 
 <style scoped>
-.select {
+.selectionBar {
   position: fixed;
-  top: 20%;
+  top: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -108,7 +86,6 @@ export default {
   width: 100%;
   height: 100px;
   background-color: #2c2c2c;
-  margin-top: 3%;
 }
 .date {
   width: 200px;
@@ -153,19 +130,17 @@ export default {
   font: bold 20px 'Bai Jamjuree';
   line-height: 50px;
   letter-spacing: 0.1em;
-  border: 0;
   border-radius: 0;
+  border: 0;
   cursor: pointer;
 }
-#f-round-active, #s-round-active, #ssn-off-active {
-  width: 200px;
-  background-color: #202020;
-  color: #9f8950;
-  font: bold 20px 'Bai Jamjuree';
-  line-height: 50px;
-  letter-spacing: 0.1em;
-  border: 0;
-  cursor: pointer;
+
+button:hover{
+  background: #2f2f2f;
+}
+button:focus{
+  color: #9F8950;
+  background: #202020;
 }
 .search {
   width: 240px;
