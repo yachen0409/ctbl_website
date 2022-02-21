@@ -119,9 +119,9 @@ export default {
 <style scoped>
 .schedule-table {
   position: fixed;
-  top: 40%;
+  top: 350px;
   width: 80%;
-  height: 400px;
+  height: 500px;
   margin: 0 10%;
   border-radius: 20px;
   background-color: #373737;
