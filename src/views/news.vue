@@ -1,7 +1,9 @@
 <template>
   <div id="news">
     <Title :titles="{ title : 'NEWS' }"></Title>
-    <h1>This is news page</h1>
+    <div id="newsContent">
+      <h1>This is news page</h1>
+    </div>
   </div>
 </template>
 
@@ -20,5 +22,10 @@ export default {
   background-color: #2c2c2c;
   color: white;
   text-align: center;
+}
+
+#newsContent {
+  position: sticky;
+  top: 160px;
 }
 </style>
