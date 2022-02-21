@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div v-if="isLoading" id="start">
-      <video id="video-container" autoplay muted>
+      <!-- <video id="video-container" autoplay muted>
         <source src="./assets/start.mp4" type="video/mp4" />
-      </video>
+      </video> -->
     </div>
     <div v-else>
       <div id="nav">      
@@ -30,14 +30,14 @@
 import { ref, onMounted } from 'vue';
 export default{
   setup() { 
-    const isLoading = ref(false)
-    onMounted(() => {
-      isLoading.value = true
-      setTimeout(() => {
-        isLoading.value = false
-      }, 4000)
-    })
-    return { isLoading }
+    // const isLoading = ref(false)
+    // onMounted(() => {
+    //   isLoading.value = true
+    //   setTimeout(() => {
+    //     isLoading.value = false
+    //   }, 4000)
+    // })
+    // return { isLoading }
   }
 }
 </script>

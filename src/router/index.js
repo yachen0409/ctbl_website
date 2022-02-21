@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Announcement from '../views/Announcement.vue'
+import SinglePost from '../components/SinglePost.vue'
 import Schedule from '../views/Schedule.vue'
 import Score from '../views/Score.vue'
 import Data from '../views/Data.vue'
@@ -17,6 +18,11 @@ const routes = [
     path: '/announcement',
     name: 'Announcement',
     component: Announcement
+  },
+  {
+    path: '/announcement/:id',
+    name: 'SinglePost',
+    component: SinglePost
   },
   {
     path: '/schedule',
