@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Selection from './../components/schedule/Selection.vue'
-import Table from './../components/schedule/Table.vue'
+import Selection from '../components/schedule/ScheduleSelection.vue'
+import Table from '../components/schedule/ScheduleTable.vue'
 export default {
   components: { Selection, Table },
   setup(){
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .schedule {
   width: 100%;
   height: 100vh;
@@ -27,7 +27,7 @@ export default {
 }
 #title {
   position: fixed;
-  top: 10%;
+  top: 100px;
   width: 100%;
   height: 75px;
   background: linear-gradient(269.04deg, rgba(159, 137, 80, 0.495) 57.82%, rgba(89, 81, 61, 0) 85.4%);
