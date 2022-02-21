@@ -1,6 +1,5 @@
 <template>
   <div class="ranking-table">
-    
     <table>
       <thead>
         <tr><th colspan="2">隊伍</th>
@@ -56,14 +55,13 @@ export default {
 <style>
 .ranking-table {
   position: fixed;
-  top: 40%;
+  top: 350px;
   width: 80%;
   height: 540px;
   margin: 0 10%;
   border-radius: 20px;
   background-color: #373737;
   overflow-y: scroll; 
-  
 }
 .ranking-table::-webkit-scrollbar{
   display: none;
